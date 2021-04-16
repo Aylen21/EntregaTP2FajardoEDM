@@ -1,7 +1,7 @@
 package ar.edu.unju.edm.controller;
 
 import org.apache.commons.logging.LogFactory;
-import org.apache.juli.logging.Log;
+import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +14,7 @@ import ar.edu.unju.edm.service.IProductoService;
 
 @Controller
 public class ProductoController {
-	private static final Log AYLEN = (Log) LogFactory.getLog(ProductoController.class);;
+	private static final Log AYLEN = LogFactory.getLog(ProductoController.class);;
 	
 	@Autowired 
 	IProductoService iProductoService;
@@ -24,7 +24,7 @@ public class ProductoController {
 		return("producto");
 	}
 	
-	@PostMapping("/nuevoProducto")
+	@PostMapping("/producto")
 	public String guardarNuevoProducto(@ModelAttribute("unProducto") Producto nuevoProducto, Model model) {
     iProductoService.guardarProducto(nuevoProducto);
     
@@ -49,4 +49,4 @@ public class ProductoController {
 
 	
 }
-//guku
+//
