@@ -16,6 +16,7 @@ public class ProductoServiceImpl implements IProductoService{
 	@Autowired
 	Producto unProducto;
 	
+	ArrayList<Producto> listaDeProductos = new ArrayList<Producto>();
 	@Override
 	public void guardarProducto(Producto unProducto) {
 		// TODO Auto-generated method stub
@@ -50,6 +51,12 @@ public class ProductoServiceImpl implements IProductoService{
 	public Producto obtenerNuevoProducto() {
 		// TODO Auto-generated method stub
 		return unProducto;
+	}
+
+	@Override
+	public Producto obtenerUltimoProducto() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
