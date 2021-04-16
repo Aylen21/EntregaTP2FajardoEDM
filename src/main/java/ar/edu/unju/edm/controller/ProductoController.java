@@ -27,6 +27,7 @@ public class ProductoController {
 	@PostMapping("/nuevoProducto")
 	public String guardarNuevoProducto(@ModelAttribute("unProducto") Producto nuevoProducto, Model model) {
     iProductoService.guardarProducto(nuevoProducto);
+    
   //mostrar el listado de producto luego de la carga de un producto
   		System.out.println(iProductoService.obtenerTodosProductos().get(0).getMarca());
   		model.addAttribute("productos", iProductoService.obtenerTodosProductos());
